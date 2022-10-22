@@ -13,6 +13,7 @@ files <- list.files(system.file("external", package = "sdm"),
 
 b <- list()
 
+# Simple for loop
 for (i in 1:length(files)) {
   b[[i]] <- terra::rast(files[[i]])
   plot(b[[i]])
