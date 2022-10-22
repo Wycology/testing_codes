@@ -8,7 +8,7 @@
 library(terra)
 
 files <- list.files(system.file("external", package = "sdm"),
-                    pattern = ".asc$", full.names = T)
+                    pattern = ".asc$", full.names = TRUE)
 
 b <- list()
 
