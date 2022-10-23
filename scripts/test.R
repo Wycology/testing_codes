@@ -216,6 +216,3 @@ qsort(iris$Sepal.Width)
 
 
 
-
-
-
