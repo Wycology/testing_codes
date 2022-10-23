@@ -120,7 +120,8 @@ ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) +
   xlab('Year') +
   ylab('GDP per capita')
 
-# Access to electricity % of population
+# Access to electricity % of population ----------------------------------------------------------
+
 dat <- WDI(indicator = "EG.ELC.ACCS.ZS", country = c("KEN", "UGA", "TZA")) 
 
 dat |> drop_na() |>  ggplot(aes(year, EG.ELC.ACCS.ZS, col = country)) + 
