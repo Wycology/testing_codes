@@ -122,15 +122,16 @@ ggplot(dat, aes(year, NY.GDP.PCAP.KD, color = country)) +
 
 # Access to electricity % of population ----------------------------------------------------------
 
-dat <- WDI(indicator = "EG.ELC.ACCS.ZS", country = c("KEN", "UGA", "TZA")) 
+dat <-
+  WDI(indicator = "EG.ELC.ACCS.ZS", country = c("KEN", "UGA", "TZA"))
 
-dat |> drop_na() |>  ggplot(aes(year, EG.ELC.ACCS.ZS, col = country)) + 
-  geom_line() + 
+dat |> drop_na() |>  ggplot(aes(year, EG.ELC.ACCS.ZS, col = country)) +
+  geom_line() +
   theme(legend.background = element_rect(
-  fill = "purple",
-  size = 0.5,
-  colour = "red"
-))
+    fill = "purple",
+    size = 0.5,
+    colour = "red"
+  ))
 
 # Data wrangling ---------------------------------------------------------------------------------
 
