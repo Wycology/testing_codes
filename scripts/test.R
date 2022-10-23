@@ -67,9 +67,9 @@ for (i in 1:length(raster_files)) {
   ras[[i]] <- raster::plot(ras[[i]])
 }
 
-# f <- terra::aggregate(terra::as.polygons(d[[1]]))
-# plot(d[[1]])
-# plot(f, lwd = 5, border = "purple", add = T)
+f <- terra::aggregate(terra::as.polygons(d[[1]]))
+plot(d[[1]])
+plot(f, lwd = 5, border = "purple", add = T)
 
 # World Bank Data --------------------------------------------------------------------------------
 
