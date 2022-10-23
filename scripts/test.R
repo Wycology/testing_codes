@@ -49,10 +49,10 @@ crs(b) <- 23030
 
 mapview::mapview(raster::projectRaster(b, crs = crs(World)))
 
-# d <- terra::rast(list.files(system.file("external",
-#                                           package = "sdm"),
-#                               pattern = ".asc$",
-#                               full.names = T))
+d <- terra::rast(list.files(system.file("external",
+                                          package = "sdm"),
+                              pattern = ".asc$",
+                              full.names = T))
 
 raster_files <- list.files(system.file("external", package = "sdm"),
                            pattern = ".asc$",
