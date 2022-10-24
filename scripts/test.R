@@ -6,15 +6,24 @@
 
 # Looping through raster files -------------------------------------------------------------------
 
-library(terra)
-library(tidyverse)
-library(sf)
-library(WDI)
-library(Data4Ecologists)
-library(lubridate)
-library(doParallel)
-library(parallel)
-library(iterators)
+library(terra)            # Version 1.6.17
+library(tidyverse)        # Version 1.3.2
+library(sf)               # Version 1.0.8
+library(WDI)              # Version 2.7.8
+library(Data4Ecologists)  # Version 0.0.0.9000
+library(lubridate)        # Version 1.8.0
+library(doParallel)       # Version 1.0.17
+library(parallel)         # Version 4.2.1
+library(iterators)        # Version 1.0.14
+library(foreach)          # Version 1.5.2
+
+pks <- c("terra", "tidyverse", "sf", "WDI", "data4Ecologists", "lubridate", 
+         "doParallel",
+         "parallel", "iterators", "foreach")
+
+foreach(i = pks, .combine = c) %do% {
+  packageVersion(i)
+}
 
 files <- list.files(system.file("external", package = "sdm"),
                     pattern = ".asc$",
@@ -133,6 +142,21 @@ dat |> drop_na() |>  ggplot(aes(year, EG.ELC.ACCS.ZS, col = country)) +
     colour = "red"
   ))
 
+
+dat <-
+  WDI(indicator = "EN.MAM.THRD.NO", country = c("MDG", "ECU", "MYS"))
+
+# Threatened mammal species ----------------------------------------------------------------------
+
+dat |> drop_na() |>  ggplot(aes(year, EN.MAM.THRD.NO, col = country)) +
+  geom_line() +
+  theme(legend.background = element_rect(
+    fill = "purple",
+    size = 0.5,
+    colour = "red"
+  ))
+
+
 # Data wrangling ---------------------------------------------------------------------------------
 
 df <-
@@ -204,6 +228,62 @@ qsort <- function(x) {
 }
 
 qsort(iris$Sepal.Width)
+
+
+# Loading raster layers --------------------------------------------------------------------------
+
+files <- list.files(system.file("external", package = "sdm"), 
+                    pattern = ".asc$", full.names = T)
+
+foreach(f = files) %do% {
+  raster::plot(raster::raster(f))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
