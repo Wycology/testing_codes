@@ -28,7 +28,8 @@ foreach(i = pks, .combine = c) %do% {
 
 files <- list.files(system.file("external", package = "sdm"),
                     pattern = ".asc$",
-                    full.names = TRUE)
+                    full.names = TRUE
+                    )
 
 b <- list()
 
