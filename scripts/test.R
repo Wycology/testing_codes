@@ -2,6 +2,8 @@
 
 # Created on 22nd October 2022
 
+# Last updated 
+
 # This is a repo for testing R codes
 
 # Looping through raster files -------------------------------------------------------------------
@@ -18,8 +20,7 @@ library(iterators)        # Version 1.0.14
 library(foreach)          # Version 1.5.2
 
 pks <- c("terra", "tidyverse", "sf", "WDI", "data4Ecologists", "lubridate", 
-         "doParallel",
-         "parallel", "iterators", "foreach")
+         "doParallel", "parallel", "iterators", "foreach")
 
 foreach(i = pks, .combine = c) %do% {
   packageVersion(i)
