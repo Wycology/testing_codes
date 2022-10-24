@@ -2,7 +2,7 @@
 
 # Created on 22nd October 2022
 
-# Last updated on 24 Oct
+# Last updated on 24 Oct 2022
 
 # This is a repo for testing R codes
 
