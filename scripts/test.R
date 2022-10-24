@@ -43,8 +43,8 @@ for (i in 1:length(files)) {
 
 # END --------------------------------------------------------------------------------------------
 
-system.file("gpkg/nc.gpkg", package = "sf") |>
-  read_sf() -> nc
+nc <- system.file("gpkg/nc.gpkg", package = "sf") |> read_sf()
+
 nc.32119 <- st_transform(nc, 'EPSG:32119')
 nc.32119 |>
   select(BIR74) |>
