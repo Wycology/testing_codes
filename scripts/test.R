@@ -4,7 +4,7 @@
 
 # Last updated on 25 October 2022
 
-# This is a repo for testing siR codes
+# This is a repo for testing simp R codes
 
 # Looping through raster files -------------------------------------------------------------------
 
