@@ -2,7 +2,7 @@
 
 # Created on 22nd October 2022
 
-# Last updated on 24 Oct 2022
+# Last updated on 2 Oct 2022
 
 # This is a repo for testing R codes
 
@@ -244,17 +244,19 @@ foreach(f = files) %do% {
 }
 
 
+# Parallel downloading species occurrence data ---------------------------------------------------
 
+spec <- read_csv("D:/spec.csv")
+m <- spec |> separate(col = species, 
+                      into = c("one", "two", "three", "four", 
+                               "five", "six", "seven", "eight"),
+                      sep = " ") |> select(one, two) |> unite(col = combi, sep = " ")
+m$combi
+b <- m$combi
+registerDoParallel(cores = 6)
+m <- foreach(sp = b) %dopar% {rgbif::occ_search(scientificName = sp)$data}
 
-
-
-
-
-
-
-
-
-
+stopImplicitCluster()
 
 
 
