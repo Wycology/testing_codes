@@ -13,7 +13,7 @@ library(tidyverse)        # Version 1.3.2
 library(sf)               # Version 1.0.9
 library(WDI)              # Version 2.7.8
 library(Data4Ecologists)  # Version 0.0.0.9000
-library(lubridate)        # Version 1.8.0
+library(lubridate)        # Version 1.9.0
 library(doParallel)       # Version 1.0.17
 library(parallel)         # Version 4.2.1
 library(iterators)        # Version 1.0.14
