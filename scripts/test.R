@@ -15,7 +15,7 @@ library(WDI)              # Version 2.7.8
 library(Data4Ecologists)  # Version 0.0.0.9000
 library(lubridate)        # Version 1.9.0
 library(doParallel)       # Version 1.0.17
-library(parallel)         # Version 4.2.1
+library(parallel)         # Version 4.2.2
 library(iterators)        # Version 1.0.14
 library(foreach)          # Version 1.5.2
 
