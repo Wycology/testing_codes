@@ -18,9 +18,10 @@ library(doParallel)       # Version 1.0.17
 library(parallel)         # Version 4.2.2
 library(iterators)        # Version 1.0.14
 library(foreach)          # Version 1.5.2
+library(tmap)             # Version 3.3.3
 
 pks <- c("terra", "tidyverse", "sf", "WDI", "data4Ecologists", "lubridate", 
-         "doParallel", "parallel", "iterators", "foreach"
+         "doParallel", "parallel", "iterators", "foreach", "tmap"
          )
 
 foreach(i = pks, .combine = c) %do% {
@@ -59,6 +60,8 @@ b <- raster::stack(list.files(
 ))
 
 crs(b) <- 23030
+
+data(World)
 
 mapview::mapview(raster::projectRaster(b, crs = crs(World)))
 
