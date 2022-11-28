@@ -61,7 +61,7 @@ b <- raster::stack(list.files(
 
 crs(b) <- 23030
 
-data(World)
+data("World")
 
 mapview::mapview(raster::projectRaster(b, crs = crs(World)))
 
