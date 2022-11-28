@@ -8,9 +8,9 @@
 
 # Looping through raster files -------------------------------------------------------------------
 
-library(terra)            # Version 1.6.17
+library(terra)            # Version 1.6.41
 library(tidyverse)        # Version 1.3.2
-library(sf)               # Version 1.0.8
+library(sf)               # Version 1.0.9
 library(WDI)              # Version 2.7.8
 library(Data4Ecologists)  # Version 0.0.0.9000
 library(lubridate)        # Version 1.8.0
@@ -24,7 +24,7 @@ pks <- c("terra", "tidyverse", "sf", "WDI", "data4Ecologists", "lubridate",
          )
 
 foreach(i = pks, .combine = c) %do% {
-  packageVersion(i)
+  paste(i, packageVersion(i))
 }
 
 files <- list.files(system.file("external", package = "sdm"),
@@ -257,42 +257,3 @@ registerDoParallel(cores = 6)
 m <- foreach(sp = b) %dopar% {rgbif::occ_search(scientificName = sp)$data}
 
 stopImplicitCluster()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
