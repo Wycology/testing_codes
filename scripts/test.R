@@ -4,7 +4,7 @@
 
 # Last updated on 11th Dec 2022
 
-# This is a repo for testing simple R codes
+# This is a repositor for testing simple R codes
 
 # Looping through raster files -------------------------------------------------------------------
 
