@@ -2,13 +2,13 @@
 
 # Created on 22nd October 2022
 
-# Last updated on 6th December 2022
+# Last updated on th December 2022
 
 # This is a repo for testing simple R codes
 
 # Looping through raster files -------------------------------------------------------------------
 
-library(terra)            # Version 1.6.41
+library(terra)            # Version 1.6.47
 library(tidyverse)        # Version 1.3.2
 library(sf)               # Version 1.0.9
 library(WDI)              # Version 2.7.8
