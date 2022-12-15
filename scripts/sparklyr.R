@@ -2,7 +2,7 @@
 
 # Task: Working with SPark in R\
 # Date created: 15th December 2022
-# Last modified on 15th 
+# Last modified on 15th December 
 
 # devtools::install_github("sparklyr/sparklyr")
 library(sparklyr)
