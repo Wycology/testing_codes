@@ -1,7 +1,7 @@
 # Source https://github.com/sparklyr/sparklyr
 
 # Task: Working with SPark in R\
-# Date created: 
+# Date created: 15th 
 
 # devtools::install_github("sparklyr/sparklyr")
 library(sparklyr)
