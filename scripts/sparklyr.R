@@ -1,5 +1,7 @@
 # Source https://github.com/sparklyr/sparklyr
 
+# Task: Working with SPark in R
+
 # devtools::install_github("sparklyr/sparklyr")
 library(sparklyr)
 # spark_install() # This is 219 Mbs zipped, quite big package
