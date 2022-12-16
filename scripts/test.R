@@ -8,21 +8,22 @@
 
 # Looping through raster files -------------------------------------------------------------------
 
+library(Data4Ecologists)  # Version 0.0.0.9000
+library(doParallel)       # Version 1.0.17
+library(foreach)          # Version 1.5.2
+library(gtsummary)        # Version 1.6.3
+library(iterators)        # Version 1.0.14
+library(lubridate)        # Version 1.9.0
+library(parallel)         # Version 4.2.2
+library(sf)               # Version 1.0.9
 library(terra)            # Version 1.6.47
 library(tidyverse)        # Version 1.3.2
-library(sf)               # Version 1.0.9
-library(WDI)              # Version 2.7.8
-library(Data4Ecologists)  # Version 0.0.0.9000
-library(lubridate)        # Version 1.9.0
-library(doParallel)       # Version 1.0.17
-library(parallel)         # Version 4.2.2
-library(iterators)        # Version 1.0.14
-library(foreach)          # Version 1.5.2
 library(tmap)             # Version 3.3.3
+library(WDI)              # Version 2.7.8
 
-pks <- c("terra", "tidyverse", "sf", "WDI", "data4Ecologists", "lubridate", 
-         "doParallel", "parallel", "iterators", "foreach", "tmap"
-         )
+
+pks <- c("data4Ecologists", "doParallel", "foreach", "gtsummary", "iterators",
+         "lubridate", "parallel", "sf", "terra", "tidyverse",  "tmap", "WDI")
 
 foreach(i = pks, .combine = c) %do% {
   paste(i, packageVersion(i))
