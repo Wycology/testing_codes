@@ -263,7 +263,8 @@ m <- foreach(sp = b) %dopar% {rgbif::occ_search(scientificName = sp)$data}
 stopImplicitCluster()
 
 trial %>% 
-  select(trt, age, grade, response) %>% 
+  select(trt, age, grade, response) %>%
+  tbl_summary(by = trt) %>% 
 
 
 
