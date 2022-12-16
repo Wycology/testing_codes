@@ -269,7 +269,7 @@ trial %>%
   add_p() %>%
   add_overall() %>%
   add_n() %>% 
-  
+  bold_labels()
 
 
 
