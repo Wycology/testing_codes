@@ -264,8 +264,10 @@ stopImplicitCluster()
 
 trial %>% 
   select(trt, age, grade, response) %>%
-  tbl_summary(by = trt) %>%
-  add_p()
+  tbl_summary(by = trt,
+              missing = "no") %>%
+  add_p() %>%
+  add_overall() %>% 
 
 
 
