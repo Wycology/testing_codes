@@ -267,7 +267,9 @@ trial %>%
   tbl_summary(by = trt,
               missing = "no") %>%
   add_p() %>%
-  add_overall() %>% 
+  add_overall() %>%
+  add_n() %>% 
+  
 
 
 
